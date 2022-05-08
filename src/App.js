@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Basic from './components/Basic';
+import Deletes from './components/Deletes';
+import Saves from './components/Saves';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    
+    state = {  }
+    render() { 
+        return ( 
+            <div className="container">
+                <Basic />
+                <div className="boxes">
+                  <Saves /> 
+                  <Deletes />   
+                </div> 
+            </div>
+          );
+    }
 }
-
+ 
 export default App;
